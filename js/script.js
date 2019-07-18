@@ -126,6 +126,7 @@
     function tagClickHandler(event) {
         /*[done] prevent default action for this event */
         event.preventDefault();
+
         /*[done] make new constant named "clickedElement" and give it the value of "this" */
         const clickedElement = this;
 
@@ -202,4 +203,51 @@
     }
     generateAuthors();
 
+    function authorClickHandler(event){
+        /*[done] prevent default action for handler */
+        event.preventDefault();
+
+        /*[done] assign "this" to const */
+        const clickedElement = this;
+
+        /*[done] read href value of clicked elemtn */
+        const HREF = clickedElement.getAttribute('href');
+        console.log(HREF);
+
+        /*[done] extract author from href */
+        const AUTHOR = HREF.replace('#author-', '');
+
+        /*[done] find all authors links with acive */
+        const activeAuthors = document.querySelectorAll('a[href="' + HREF + '"]');
+
+        /*[done] loop for echa acitve author link */
+        for (let activeAuthor of activeAuthors){
+            /*[done] remove class active */
+            activeAuthor.classList.remove('active');
+        }/* end loop */
+
+        /*[done] get all author links with "href" of active "href" author*/
+        const targetAuthors = document.querySelectorAll(HREF);
+
+        /* [done] loop for each author link */
+        for (let targetAuthor of targetAuthors){
+            /*[done] add active class */
+            targetAuthor.classListadd('active');
+        }/* end loop */
+
+        /*[done] execute function "generateTitleLinks" with article selector as argument */
+        generateTitleLinks('[data-author="' + AUTHOR + '"]');
+    }
+
+    function addClickListenersToAuthors(){
+        /*[done] find all links to author collection */
+        const LINKS = document.querySelectorAll('.post-author a');
+
+        /*[done] loop for each link */
+        for (let link of LINKS){
+            /* add event handeler to links */
+            link.addEventListener('click', authorClickHandler)
+        }/* end loop */
+    }
+    addClickListenersToAuthors();
 }
