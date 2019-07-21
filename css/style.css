@@ -107,4 +107,29 @@ body {
 .post-tags p {
   margin: 0 10px 0 0;
 }
+
+/* tags */
+.sidebar .tags li {
+  display: inline-block;
+}
+
+.sidebar .tags .tag-size-1 {
+  font-size: 60%;
+}
+
+.sidebar .tags .tag-size-2 {
+  font-size: 68%;
+}
+
+.sidebar .tags .tag-size-3 {
+  font-size: 75%;
+}
+
+.sidebar .tags .tag-size-4 {
+  font-size: 85%;
+}
+
+.sidebar .tags .tag-size-5 {
+  font-size: 140%;
+}
 /*# sourceMappingURL=style.css.map */

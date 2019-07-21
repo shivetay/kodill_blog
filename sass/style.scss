@@ -119,3 +119,29 @@ body {
   }
 }
 
+/* tags */
+.sidebar{
+  .tags{
+    li{
+      display: inline-block;
+    }
+    .tag-size{
+      &-1{
+        font-size: 60%;
+      }
+      &-2{
+        font-size: 68%;
+      }
+      &-3{
+        font-size: 75%;
+      }
+      &-4{
+        font-size: 85%;
+      }
+      &-5{
+        font-size: 140%;
+      }
+    }
+  }
+}
+
