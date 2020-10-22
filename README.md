@@ -13,6 +13,6 @@
  
  ### Demo
  
- (JS Blog)[ https://shivetay.github.io/kodill_blog/]
+ (JS Blog)[https://shivetay.github.io/kodill_blog/]
  
 
